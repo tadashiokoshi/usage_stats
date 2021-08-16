@@ -8,20 +8,19 @@ class ConfigurationInfo {
       this.lastTimeStamp});
 
   /// Construct class from the json map
-  factory ConfigurationInfo.fromMap(Map map) => map == null
-      ? null
-      : ConfigurationInfo(
-          activationCount: map['activationCount'],
-          totalTimeActive: map['totalTimeActive'],
-          configuration: map['configuration'],
-          lastTimeActive: map['lastTimeActive'],
-          firstTimeStamp: map['firstTimeStamp'],
-          lastTimeStamp: map['lastTimeStamp']);
+  factory ConfigurationInfo.fromMap(Map map){
+      return ConfigurationInfo(activationCount: map['activationCount'],
+			       totalTimeActive: map['totalTimeActive'],
+			       configuration: map['configuration'],
+			       lastTimeActive: map['lastTimeActive'],
+			       firstTimeStamp: map['firstTimeStamp'],
+			       lastTimeStamp: map['lastTimeStamp']);
+  }
 
-  final String activationCount;
-  final String totalTimeActive;
-  final String configuration;
-  final String lastTimeActive;
-  final String firstTimeStamp;
-  final String lastTimeStamp;
+  final String? activationCount;
+  final String? totalTimeActive;
+  final String? configuration;
+  final String? lastTimeActive;
+  final String? firstTimeStamp;
+  final String? lastTimeStamp;
 }

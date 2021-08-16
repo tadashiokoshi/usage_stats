@@ -8,20 +8,20 @@ class EventInfo {
       this.count});
 
   /// Construct class from the json map
-  factory EventInfo.fromMap(Map map) => map == null
-      ? null
-      : EventInfo(
+  factory EventInfo.fromMap(Map map){
+      return EventInfo(
           firstTimeStamp: map['firstTimeStamp'],
           lastTimeStamp: map['lastTimeStamp'],
           totalTime: map['totalTime'],
           lastEventTime: map['lastEventTime'],
           eventType: map['eventType'],
           count: map['count']);
-
-  final String firstTimeStamp;
-  final String lastTimeStamp;
-  final String totalTime;
-  final String lastEventTime;
-  final String eventType;
-  final String count;
+  }
+    
+  final String? firstTimeStamp;
+  final String? lastTimeStamp;
+  final String? totalTime;
+  final String? lastEventTime;
+  final String? eventType;
+  final String? count;
 }

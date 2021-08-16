@@ -3,16 +3,16 @@ class EventUsageInfo {
       {this.eventType, this.timeStamp, this.packageName, this.className});
 
   /// Construct class from the json map
-  factory EventUsageInfo.fromMap(Map map) => map == null
-      ? null
-      : EventUsageInfo(
+  factory EventUsageInfo.fromMap(Map map){
+      return EventUsageInfo(
           eventType: map['eventType'],
           timeStamp: map['timeStamp'],
           packageName: map['packageName'],
           className: map['className']);
-
-  final String eventType;
-  final String timeStamp;
-  final String packageName;
-  final String className;
+  }
+    
+  final String? eventType;
+  final String? timeStamp;
+  final String? packageName;
+  final String? className;
 }
